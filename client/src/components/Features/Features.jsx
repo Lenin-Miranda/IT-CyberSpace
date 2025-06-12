@@ -1,3 +1,6 @@
+import { Link } from "react-scroll";
+import "../../styles/components/Features.css";
+
 function Features() {
   return (
     <section id="features" className="features sectionMarginTop">
@@ -138,14 +141,16 @@ function Features() {
                     <h4 style={{ textAlign: "center" }}>3 more </h4>
 
                     <div className="text-center text-lg-start">
-                      <a
-                        href="computerRepair"
-                        className="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center"
-                        style={{ padding: "5px 25px 5px 25px" }}
+                      <Link
+                        to="computerRepair"
+                        smooth={true}
+                        duration={500}
+                        offset={-70}
+                        className="btn-read-more"
                       >
                         <span>Read More</span>
                         <i className="bi bi-arrow-right"></i>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

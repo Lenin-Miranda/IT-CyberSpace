@@ -17,10 +17,12 @@ router.post("/", async (req, res) => {
   });
 
   const mailToCompany = {
-    from: `"Website Contact" <${process.env.EMAIL_USER}>`,
+    from: `"IT Cyberspace" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_TO,
-    subject: `New Message: ${subject}`,
-    text: `from: ${name} <${email}\n\nMessage: ${message}`,
+    name: name,
+    email: email,
+    subject: `Hi, i am ${name}\n\n${subject}`,
+    text: `${message}`,
   };
 
   const confirmationToCLient = {

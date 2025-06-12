@@ -3,7 +3,7 @@
   min-height: 100vh;
   background: url("../../assets/img/hero-bg.png") center center;
   background-size: cover;
-  padding: 120px 0;
+  padding: 160px 0 120px 0;
 }
 
 .hero h1 {
@@ -64,7 +64,7 @@
 @media (max-width: 991px) {
   .hero {
     text-align: center;
-    padding-top: 58px;
+    padding-top: 98px;
   }
 
   .hero h1 {
@@ -91,7 +91,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 60px;
+    padding-top: 100px;
   }
 
   .hero h1 {

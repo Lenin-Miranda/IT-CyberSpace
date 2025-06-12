@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-scroll";
 const Values = () => {
   /* Crear array de objetos con los datos de los servicios */
   return (
@@ -85,13 +85,20 @@ const Values = () => {
                     >
                       <div className="">
                         <div className="text-center text-lg-start">
-                          <a
-                            href="itServices"
+                          <Link
+                            to="itServices"
+                            smooth={true}
+                            duration={500}
+                            offset={-70}
                             className="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center"
+                            style={{
+                              cursor: "pointer",
+                              textDecoration: "none",
+                            }}
                           >
                             <span>Read More</span>
                             <i className="bi bi-arrow-right"></i>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import Nav from "../Nav/Nav";
-import { Cursor } from "react-simple-typewriter";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
