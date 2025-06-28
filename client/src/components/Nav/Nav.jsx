@@ -20,7 +20,7 @@ function Nav() {
       // Esperamos un momento antes de mostrar el menú
       setTimeout(() => {
         setShowMenu(true);
-      }, 380);
+      }, 450);
     } else {
       setShowMenu(false);
     }
@@ -71,6 +71,7 @@ function Nav() {
               duration={500}
               offset={-70}
               onClick={handleLinkClick}
+              style={{ cursor: "pointer" }}
             >
               Home
             </Link>
@@ -83,6 +84,7 @@ function Nav() {
               duration={500}
               offset={-70}
               onClick={handleLinkClick}
+              style={{ cursor: "pointer" }}
             >
               About
             </Link>
@@ -95,6 +97,7 @@ function Nav() {
               duration={500}
               offset={-70}
               onClick={handleLinkClick}
+              style={{ cursor: "pointer" }}
             >
               IT Services
             </Link>
@@ -107,6 +110,7 @@ function Nav() {
               duration={500}
               offset={-70}
               onClick={handleLinkClick}
+              style={{ cursor: "pointer" }}
             >
               Residential Services
             </Link>
@@ -119,6 +123,7 @@ function Nav() {
               duration={500}
               offset={-70}
               onClick={handleLinkClick}
+              style={{ cursor: "pointer" }}
             >
               Development Services
             </Link>
@@ -131,6 +136,7 @@ function Nav() {
               duration={500}
               offset={-70}
               onClick={handleLinkClick}
+              style={{ cursor: "pointer" }}
             >
               Contact Us
             </Link>

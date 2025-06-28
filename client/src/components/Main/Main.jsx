@@ -8,7 +8,6 @@ import { Element } from "react-scroll";
 /* Bootstrap Icons */
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "remixicon/fonts/remixicon.css";
 
 function Main() {
   return (

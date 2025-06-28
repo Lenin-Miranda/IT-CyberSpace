@@ -1,17 +1,45 @@
+/* Asegurar que las filas tengan altura uniforme */
+.values .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.values .row > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para el header de la sección values */
+.values .section-header h3 {
+  color: #012970;
+}
+
 .values .box {
-  padding: 30px;
+  padding: 30px; /* Volvemos a 30px */
   text-align: center;
-  transition: transform 0.3s ease;
-  height: 100%;
+  transition: all 0.3s ease;
+  height: 100%; /* Usamos 100% de altura */
   will-change: transform;
   transform: translateZ(0);
-  box-shadow: 0px 0 10px rgba(1, 41, 112, 0.05); /* fijo */
+  /* Usamos filter: drop-shadow que es más eficiente que box-shadow */
+  filter: drop-shadow(0 2px 8px rgba(1, 41, 112, 0.08));
+  background: #fff;
+  border-radius: 8px;
+  /* Agregamos un borde sutil para definición */
+  border: 1px solid rgba(1, 41, 112, 0.05);
+  /* Flexbox para distribuir el contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .values .box img {
-  padding: 30px 50px;
+  padding: 20px 30px; /* Padding más uniforme para las imágenes */
   transition: transform 0.3s ease;
   transform: scale(1.05);
+  flex-shrink: 0; /* Evita que la imagen se comprima */
+  max-height: 120px; /* Altura máxima para consistencia */
+  object-fit: contain; /* Mantiene proporciones */
 }
 
 .values .box:hover {
@@ -20,4 +48,24 @@
 
 .values .box:hover img {
   transform: scale(1);
+}
+
+/* Estilos para los títulos h3 de las cards */
+.values .box h3 {
+  color: #012970;
+  font-size: 24px; /* Cambiamos a 24px */
+  font-weight: 700;
+  margin: 0 0 18px 0; /* Agregamos margin-bottom de 18px */
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.values .box p {
+  margin: 0; /* Sin margin para usar gap */
+  line-height: 1.5;
+  font-size: 16px; /* Cambiamos a 16px */
+  flex-grow: 1; /* Toma el espacio restante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

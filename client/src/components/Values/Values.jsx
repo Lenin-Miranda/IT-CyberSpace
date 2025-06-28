@@ -1,7 +1,112 @@
 import React from "react";
 import { Link } from "react-scroll";
+
+// Importar todas las imágenes de los servicios
+import ismImg from "../../assets/img/ISM.png";
+import ndsImg from "../../assets/img/NDS.png";
+import fmImg from "../../assets/img/FM.png";
+import wwnImg from "../../assets/img/WWN.png";
+import muImg from "../../assets/img/MU.jpg";
+import csImg from "../../assets/img/CS.jpg";
+import cssImg from "../../assets/img/CSS.png";
+import o365Img from "../../assets/img/O365.png";
+import amsImg from "../../assets/img/AMS.png";
+import osmsImg from "../../assets/img/OSMS.png";
+import drsImg from "../../assets/img/DRS.png";
+import voiImg from "../../assets/img/VOI.png";
+
 const Values = () => {
   /* Crear array de objetos con los datos de los servicios */
+  const values = [
+    {
+      id: 1,
+      title: "It Support and Managment",
+      description:
+        " Comprehensive, fully certified 24X7 IT support from a professional IT team.",
+      image: ismImg,
+    },
+    {
+      id: 2,
+      title: "Network Design, Support and Engineering.",
+      description:
+        "State of the art network infrastructures designed to your specific networking needs.",
+      image: ndsImg,
+    },
+    {
+      id: 3,
+      title: "Firewall Management.",
+      description: "Unified Firewall, security management and configuration.",
+      image: fmImg,
+    },
+    {
+      id: 4,
+      title: "Wireless/Wired Networking",
+      description:
+        " Fully managed, secured, and optimized Wired/Wireless networks at your fingertips",
+      image: wwnImg,
+    },
+    {
+      id: 5,
+      title: "Migration & Upgrades",
+      description:
+        "Expertise planning with migration projects; Offering little to no downtime with migrations and system upgrades",
+      image: muImg,
+    },
+    {
+      id: 6,
+      title: "Cybersecurity Services",
+      description: "Customized security scanning & vulnerability assessments",
+      image: csImg,
+    },
+    {
+      id: 7,
+      title: "Cloud Solutions",
+      description:
+        " Business optimization - Optimize business operations and evolve your operation's effectiveness. Explore new opportunities with the Cloud",
+      image: cssImg,
+    },
+    {
+      id: 8,
+      title: "Office 365 Integration",
+      description:
+        " Boost productivity with managed Microsoft 365 – Our Office 365 services are tailored to help you design and transition your teams & organization to Microsoft 365",
+      image: o365Img,
+    },
+    {
+      id: 9,
+      title: "Application Maintenance & Support",
+      description:
+        "     Providing a full range of Application management & support for your existing solutions. Including but not limited to; Email platforms, CRM applications, Billing/Financial applications, Scheduling/Calendar applications, and more",
+      image: amsImg,
+    },
+    {
+      id: 10,
+      title: "Onsite Server Management & Support",
+      description:
+        "Onsite server support services for a variety of systems and platforms. Including but not limited to; Windows servers, Linux, CentOS, RHLE, servers, VSphere/Vcenter deployments and more!",
+      image: osmsImg,
+    },
+    {
+      id: 11,
+      title: "Disaster Recovery Solutions",
+      description:
+        "Obtain peace of mind with our disaster recovery solutions. Protect your data 24x7x365 with our data backup, replication, and recovery solutions",
+      image: drsImg,
+    },
+    {
+      id: 12,
+      title: "Voice Over IP",
+      description:
+        "VoIP deployment & troubleshooting – Expertise in configuring, troubleshooting, and deploying VoIP based hardware/software solutions",
+      image: voiImg,
+    },
+  ];
+
+  // Mostrar solo los primeros 3 servicios en móviles
+  const mobileServices = values.slice(0, 3);
+  // Mostrar solo los servicios del 4 en adelante en desktop (para evitar duplicados)
+  const desktopServices = values.slice(3);
+
   return (
     <section id="values" className="values sectionMarginBotton">
       <div className="container" data-aos="fade-up">
@@ -11,51 +116,27 @@ const Values = () => {
         </header>
 
         <div className="row">
-          <div className="col-lg-3" data-aos="fade-up">
-            <div className="box">
-              <img
-                src="src/assets/img/ISM.png"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>IT Support and Management.</h3>
-              <p>
-                Comprehensive, fully certified 24X7 IT support from a
-                professional IT team.
-              </p>
+          {/* Servicios para móviles (primeros 3) */}
+          {mobileServices.map((service, index) => (
+            <div
+              key={service.id}
+              className={`col-lg-3 ${index > 0 ? "mt-4 mt-lg-0" : ""}`}
+              data-aos="fade-up"
+            >
+              <div className="box">
+                <img
+                  src={service.image}
+                  className="img-fluid"
+                  alt={service.title}
+                  loading="lazy"
+                />
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
             </div>
-          </div>
+          ))}
 
-          <div className="col-lg-3 mt-4 mt-lg-0" data-aos="fade-up">
-            <div className="box">
-              <img
-                src="src/assets/img/NDS.png"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Network Design, Support and Engineering.</h3>
-              <p>
-                State of the art network infrastructures designed to your
-                specific networking needs.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-3 mt-4 mt-lg-0" data-aos="fade-up">
-            <div className="box">
-              <img
-                src="src/assets/img/FM.png"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Firewall Management.</h3>
-              <p>Unified Firewall, security management and configuration.</p>
-            </div>
-          </div>
-
+          {/* Caja especial para móviles con "Read More" */}
           <div
             className="col-lg-3 mt-4 d-lg-none d-xl-none d-md-block"
             data-aos="fade-up"
@@ -108,182 +189,29 @@ const Values = () => {
             </div>
           </div>
 
-          <div
-            className="col-lg-3 d-none d-xs-none d-sm-none  d-md-none d-lg-block"
-            data-aos="fade-up"
-          >
-            <div className="box">
-              <img
-                src="src/assets/img/WWN.png"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Wireless/Wired Networking</h3>
-              <p>
-                Fully managed, secured, and optimized Wired/Wireless networks at
-                your fingertips
-              </p>
+          {/* Servicios para desktop (del 4 en adelante para evitar duplicados) */}
+          {desktopServices.map((service, index) => (
+            <div
+              key={`desktop-${service.id}`}
+              className={`col-lg-3 ${
+                index > 0
+                  ? "mt-lg-4 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                  : "d-none d-xs-none d-sm-none d-md-none d-lg-block"
+              }`}
+              data-aos="fade-up"
+            >
+              <div className="box">
+                <img
+                  src={service.image}
+                  className="img-fluid"
+                  alt={service.title}
+                  loading="lazy"
+                />
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
             </div>
-          </div>
-
-          <div
-            className="col-lg-3 mt-lg-4 d-none d-xs-none d-sm-none  d-md-none d-lg-block"
-            data-aos="fade-up"
-          >
-            <div className="box">
-              <img
-                src="src/assets/img/MU.jpg"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Migration & Upgrades</h3>
-              <p>
-                Expertise planning with migration projects; Offering little to
-                no downtime with migrations and system upgrades
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="col-lg-3 mt-lg-4 d-none d-xs-none d-sm-none  d-md-none d-lg-block"
-            data-aos="fade-up"
-          >
-            <div className="box">
-              <img
-                src="src/assets/img/CS.jpg"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Cybersecurity Services</h3>
-              <p>
-                Customized security scanning &amp; vulnerability assessments
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="col-lg-3 mt-lg-4 d-none d-xs-none d-sm-none  d-md-none d-lg-block"
-            data-aos="fade-up"
-          >
-            <div className="box">
-              <img
-                src="src/assets/img/CSS.png"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Cloud Solutions</h3>
-              <p>
-                Business optimization - Optimize business operations and evolve
-                your operation’s effectiveness. Explore new opportunities with
-                the Cloud
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="col-lg-3 mt-lg-4 d-none d-xs-none d-sm-none  d-md-none d-lg-block"
-            data-aos="fade-up"
-          >
-            <div className="box">
-              <img
-                src="src/assets/img/O365.png"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Office 365 Integration</h3>
-              <p>
-                Boost productivity with managed Microsoft 365 – Our Office 365
-                services are tailored to help you design and transition your
-                teams &amp; organization to Microsoft 365
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="col-lg-3 mt-lg-4 d-none d-xs-none d-sm-none  d-md-none d-lg-block"
-            data-aos="fade-up"
-          >
-            <div className="box">
-              <img
-                src="src/assets/img/AMS.png"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Application Maintenance & Support</h3>
-              <p>
-                Providing a full range of Application management & support for
-                your existing solutions. Including but not limited to; Email
-                platforms, CRM applications, Billing/Financial applications,
-                Scheduling/Calendar applications, and more
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="col-lg-3 mt-lg-4 d-none d-xs-none d-sm-none  d-md-none d-lg-block"
-            data-aos="fade-up"
-          >
-            <div className="box">
-              <img
-                src="src/assets/img/OSMS.png"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Onsite Server Management & Support</h3>
-              <p>
-                Onsite server support services for a variety of systems and
-                platforms. Including but not limited to; Windows servers, Linux,
-                CentOS, RHLE, servers, VSphere/Vcenter deployments and more!
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="col-lg-3 mt-lg-4 d-none d-xs-none d-sm-none  d-md-none d-lg-block"
-            data-aos="fade-up"
-          >
-            <div className="box">
-              <img
-                src="src/assets/img/DRS.png"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Disaster Recovery Solutions</h3>
-              <p>
-                Obtain peace of mind with our disaster recovery solutions.
-                Protect your data 24x7x365 with our data backup, replication,
-                and recovery solutions
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="col-lg-3 mt-lg-4 d-none d-xs-none d-sm-none  d-md-none d-lg-block"
-            data-aos="fade-up"
-          >
-            <div className="box">
-              <img
-                src="src/assets/img/VOI.png"
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <h3>Voice Over IP</h3>
-              <p>
-                VoIP deployment & troubleshooting – Expertise in configuring,
-                troubleshooting, and deploying VoIP based hardware/software
-                solutions
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

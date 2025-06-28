@@ -147,8 +147,9 @@ function Features() {
                         duration={500}
                         offset={-70}
                         className="btn-read-more"
+                        style={{ cursor: "pointer" }}
                       >
-                        <span>Read More</span>
+                        <span style={{ minWidth: "100px" }}>Read More</span>
                         <i className="bi bi-arrow-right"></i>
                       </Link>
                     </div>
