@@ -1,7 +1,7 @@
 export const sendEmail = async (FormData) => {
   try {
     const response = await fetch(
-      `${import.meta.env.VITE_BACKEND_URL}/send-email`,
+      `https://cyberspace-backend.onrender.com/send-email`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -27,10 +27,10 @@ function Contact() {
       console.log(res.message);
       setStatus("sent");
 
-      // Resetea el form después de enviar
+      // Reset form after send the email
       form.current.reset();
 
-      // Desactiva por 30 segundos
+      // Desactivate for 30 seconds
       setDisabled(true);
       setTimeout(() => {
         setDisabled(false);

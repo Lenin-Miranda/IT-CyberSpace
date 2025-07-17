@@ -18,7 +18,7 @@ function Services() {
               <i className="ri-earth-line icon"></i>
               <h3>Website Development</h3>
               <Link
-                to="web-development"
+                to="home"
                 className="read-more"
                 style={{ cursor: "pointer", textDecoration: "none" }}
               >
@@ -32,7 +32,7 @@ function Services() {
               <i className="ri-cloud-windy-line icon"></i>
               <h3>Website Hosting</h3>
               <Link
-                to="web-hosting"
+                to="home"
                 className="read-more"
                 style={{ cursor: "pointer", textDecoration: "none" }}
               >
@@ -46,7 +46,7 @@ function Services() {
               <i className="ri-shopping-cart-2-line icon"></i>
               <h3>E-Commerce Platforms</h3>
               <Link
-                to="ecommerce"
+                to="home"
                 className="read-more"
                 style={{ cursor: "pointer", textDecoration: "none" }}
               >
@@ -60,7 +60,7 @@ function Services() {
               <i className="ri-smartphone-line icon"></i>
               <h3>Mobile App Development</h3>
               <Link
-                to="mobile-app"
+                to="home"
                 className="read-more"
                 style={{ cursor: "pointer", textDecoration: "none" }}
               >
@@ -74,7 +74,7 @@ function Services() {
               <i className="ri-paint-brush-fill icon"></i>
               <h3>Graphic Design</h3>
               <Link
-                to="graphic-design"
+                to="home"
                 className="read-more"
                 style={{ cursor: "pointer", textDecoration: "none" }}
               >
@@ -88,7 +88,7 @@ function Services() {
               <i className="ri-refresh-fill icon"></i>
               <h3>SEO Optimization</h3>
               <Link
-                to="seo"
+                to="home"
                 className="read-more"
                 style={{ cursor: "pointer", textDecoration: "none" }}
               >
