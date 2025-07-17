@@ -7,9 +7,9 @@
 .header.header-scrolled {
   background: #fff;
   padding: 15px 0;
-  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.08);
+  filter: drop-shadow(0 2px 20px rgba(1, 41, 112, 0.08));
   transform: translateZ(0);
-  will-change: box-shadow, transform;
+  will-change: filter, transform;
 }
 .header .logo {
   line-height: 0;

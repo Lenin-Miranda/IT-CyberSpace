@@ -1,5 +1,9 @@
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import "../../styles/components/Features.css";
+// Importar las imágenes
+import features2Img from "../../assets/img/features-2.png";
+import features3Img from "../../assets/img/features-3.png";
 
 function Features() {
   return (
@@ -43,7 +47,7 @@ function Features() {
 
           <div className="col-lg-6">
             <img
-              src="/assets/img/features-2.png"
+              src={features2Img}
               className="img-fluid"
               alt=""
               loading="lazy"
@@ -64,7 +68,7 @@ function Features() {
           <div className="row">
             <div className="col-xl-4 text-center" data-aos="fade-right">
               <img
-                src="src/assets/img/features-3.png"
+                src={features3Img}
                 className="img-fluid p-4"
                 alt=""
                 loading="lazy"
@@ -141,17 +145,14 @@ function Features() {
                     <h4 style={{ textAlign: "center" }}>3 more </h4>
 
                     <div className="text-center text-lg-start">
-                      <Link
-                        to="computerRepair"
-                        smooth={true}
-                        duration={500}
-                        offset={-70}
+                      <NavLink
+                        to="/computerRepair"
                         className="btn-read-more"
                         style={{ cursor: "pointer" }}
                       >
                         <span style={{ minWidth: "100px" }}>Read More</span>
                         <i className="bi bi-arrow-right"></i>
-                      </Link>
+                      </NavLink>
                     </div>
                   </div>
                 </div>

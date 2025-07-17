@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Nav() {
@@ -64,17 +65,13 @@ function Nav() {
       <nav id="navbar" className="navbar">
         <ul>
           <li>
-            <Link
+            <NavLink
               className="nav-link scrollto"
-              to="home"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              onClick={handleLinkClick}
+              to="/"
               style={{ cursor: "pointer" }}
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
             <Link
@@ -128,6 +125,27 @@ function Nav() {
               Development Services
             </Link>
           </li>
+          <li className="nav-link_dropdown">
+            <Link className="nav-link scrollto">
+              Services <i className="bi bi-chevron-down"></i>
+            </Link>
+            <ul className="nav-link_dropdown_item">
+              <li>
+                <NavLink
+                  to="/computerRepair"
+                  style={{ textDecoration: "none" }}
+                >
+                  Computer Repair
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/itServices" style={{ textDecoration: "none" }}>
+                  IT Services
+                </NavLink>
+              </li>
+            </ul>
+          </li>
           <li>
             <Link
               className="nav-link scrollto"
@@ -151,7 +169,7 @@ function Nav() {
         aria-label="Toggle navigation"
         style={{
           position: "fixed",
-          top: "15px",
+          top: "30px",
           right: "15px",
           zIndex: 10000,
           fontSize: "28px",

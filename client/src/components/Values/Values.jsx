@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 // Importar todas las imágenes de los servicios
 import ismImg from "../../assets/img/ISM.png";
@@ -14,6 +15,8 @@ import amsImg from "../../assets/img/AMS.png";
 import osmsImg from "../../assets/img/OSMS.png";
 import drsImg from "../../assets/img/DRS.png";
 import voiImg from "../../assets/img/VOI.png";
+// Importar imagen para la caja especial móvil
+import values1Img from "../../assets/img/values-1.png";
 
 const Values = () => {
   /* Crear array de objetos con los datos de los servicios */
@@ -144,7 +147,7 @@ const Values = () => {
             <div className="box">
               <img
                 loading="lazy"
-                src="src/assets/img/TSIT.png"
+                src={values1Img}
                 className="img-fluid"
                 alt=""
               />
@@ -166,11 +169,8 @@ const Values = () => {
                     >
                       <div className="">
                         <div className="text-center text-lg-start">
-                          <Link
+                          <NavLink
                             to="itServices"
-                            smooth={true}
-                            duration={500}
-                            offset={-70}
                             className="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center"
                             style={{
                               cursor: "pointer",
@@ -179,7 +179,7 @@ const Values = () => {
                           >
                             <span>Read More</span>
                             <i className="bi bi-arrow-right"></i>
-                          </Link>
+                          </NavLink>
                         </div>
                       </div>
                     </div>

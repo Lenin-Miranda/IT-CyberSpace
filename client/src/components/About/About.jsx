@@ -1,4 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
+// Importar la imagen about
+import aboutImg from "../../assets/img/about.png";
+
 function About() {
   return (
     <section id="about" className="about sectionPaddingTopAbout">
@@ -24,9 +28,9 @@ function About() {
               </p>
               <div className="text-center text-lg-start">
                 <Link
-                  href="#"
+                  to="home"
                   className="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center"
-                  style={{ textDecoration: "none" }}
+                  style={{ textDecoration: "none", cursor: "pointer" }}
                 >
                   <span>Read More</span>
                   <i className="bi bi-arrow-right"></i>
@@ -39,12 +43,7 @@ function About() {
             className="col-lg-6 d-flex align-items-center"
             data-aos="zoom-out"
           >
-            <img
-              src="/assets/img/about.png"
-              className="img-fluid"
-              alt=""
-              loading="lazy"
-            />
+            <img src={aboutImg} className="img-fluid" alt="" loading="lazy" />
           </div>
         </div>
       </div>

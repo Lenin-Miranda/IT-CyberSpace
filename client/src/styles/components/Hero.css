@@ -34,7 +34,7 @@
   transition: 0.5s;
   color: var(--white);
   background: var(--primary-color);
-  box-shadow: 0 8px 28px rgba(65, 84, 241, 0.4);
+  filter: drop-shadow(0 8px 28px rgba(65, 84, 241, 0.4));
 }
 
 .hero .btn-get-started:hover {

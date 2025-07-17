@@ -1,5 +1,9 @@
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+// Importar el logo
+import logoImg from "../../assets/img/ltransparent.png";
+
 function Footer() {
   const [backToTop, setBackToTop] = useState(false);
   useEffect(() => {
@@ -25,11 +29,7 @@ function Footer() {
                   className="logo d-flex align-items-center"
                   style={{ textDecoration: "none", cursor: "pointer" }}
                 >
-                  <img
-                    src="src/assets/img/ltransparent.png"
-                    alt=""
-                    loading="lazy"
-                  />
+                  <img src={logoImg} alt="" loading="lazy" />
                   <span>IT Cyberspace</span>
                 </Link>
                 <p>
@@ -63,12 +63,12 @@ function Footer() {
                 <ul>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <Link
-                      to="home"
+                    <NavLink
+                      to="/"
                       style={{ textDecoration: "none", cursor: "pointer" }}
                     >
                       Home
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
@@ -82,28 +82,37 @@ function Footer() {
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
                     <Link
+                      to="values"
+                      style={{ textDecoration: "none", cursor: "pointer" }}
+                    >
+                      It Services
+                    </Link>
+                  </li>
+                  <li>
+                    <i className="bi bi-chevron-right"></i>{" "}
+                    <Link
+                      to="features"
+                      style={{ textDecoration: "none", cursor: "pointer" }}
+                    >
+                      Residential Services
+                    </Link>
+                  </li>
+                  <li>
+                    <i className="bi bi-chevron-right"></i>{" "}
+                    <Link
                       to="services"
                       style={{ textDecoration: "none", cursor: "pointer" }}
                     >
-                      Services
+                      Development Services
                     </Link>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
                     <Link
-                      to="terms"
+                      to="contact"
                       style={{ textDecoration: "none", cursor: "pointer" }}
                     >
-                      Terms of service
-                    </Link>
-                  </li>
-                  <li>
-                    <i className="bi bi-chevron-right"></i>{" "}
-                    <Link
-                      to="privacy"
-                      style={{ textDecoration: "none", cursor: "pointer" }}
-                    >
-                      Privacy policy
+                      Contact
                     </Link>
                   </li>
                 </ul>
@@ -114,48 +123,33 @@ function Footer() {
                 <ul>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <Link
-                      to="itServices"
+                    <NavLink
+                      to="https://www.designsolutionsworld.com/"
                       style={{ textDecoration: "none", cursor: "pointer" }}
+                      target="_blank"
                     >
-                      IT Support
-                    </Link>
+                      Web Design
+                    </NavLink>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <Link
-                      to="networkDesign"
+                    <NavLink
+                      to="https://www.designsolutionsworld.com/"
                       style={{ textDecoration: "none", cursor: "pointer" }}
+                      target="_blank"
                     >
-                      Network Design
-                    </Link>
+                      Web Development
+                    </NavLink>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <Link
-                      to="firewall"
+                    <NavLink
+                      to="https://www.designsolutionsworld.com/"
                       style={{ textDecoration: "none", cursor: "pointer" }}
+                      target="_blank"
                     >
-                      Firewall Management
-                    </Link>
-                  </li>
-                  <li>
-                    <i className="bi bi-chevron-right"></i>{" "}
-                    <Link
-                      to="cloud"
-                      style={{ textDecoration: "none", cursor: "pointer" }}
-                    >
-                      Cloud Solutions
-                    </Link>
-                  </li>
-                  <li>
-                    <i className="bi bi-chevron-right"></i>{" "}
-                    <Link
-                      to="computerRepair"
-                      style={{ textDecoration: "none", cursor: "pointer" }}
-                    >
-                      Computer Repair
-                    </Link>
+                      Mobile App Development
+                    </NavLink>
                   </li>
                 </ul>
               </div>
