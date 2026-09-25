@@ -1,69 +1,44 @@
 # IT Cyberspace
 
-Welcome to **IT Cyberspace**  
-Visit the website: [https://it-cyberspace.com](https://it-cyberspace.com)
+Website presenting IT support, networking, cybersecurity and web-development services, with service pages, navigation and a contact form.
 
----
+[Website](https://it-cyberspace.com) · [Email backend](https://github.com/Lenin-Miranda/Cyberspace-backend)
 
-## What is IT Cyberspace?
+## Stack and layout
 
-IT Cyberspace is a professional platform dedicated to providing technical support, IT solutions, cybersecurity, and web development services for both businesses and residential users. Our goal is to deliver efficient, fast, and affordable solutions tailored to each client's needs.
+The React 19/Vite frontend lives in [client/](client/), with React Router, Bootstrap and Framer Motion. This repository does not contain the Express email backend.
 
----
+## Local development
 
-## Main Features
+Requires Node.js and npm.
 
-- **Modern homepage** with featured services and smooth animations.
-- **"Who We Are" section**: Meet our team and our work philosophy.
-- **IT Services**:
+```bash
+git clone https://github.com/Lenin-Miranda/IT-CyberSpace.git
+cd IT-CyberSpace/client
+npm install
+npm run dev
+```
 
-  - IT support and management
-  - Network design and support
-  - Firewall management
-  - Wired and wireless networking
-  - Migrations and upgrades
-  - Cybersecurity services
-  - Cloud solutions
-  - Office 365 integration
-  - Application maintenance and support
-  - Onsite server management
-  - Disaster recovery solutions
-  - VoIP solutions
+Open the URL printed by Vite, configured on port 3000.
 
-- **Development services**:
+## Commands
 
-  - Website development
-  - Hosting
-  - E-commerce platforms
+Run from `client/`:
 
-- **Contact form**:  
-  Allows users to send messages directly to the IT Cyberspace team for support or quotes.
+```bash
+npm run lint
+npm run build
+npm run preview
+```
 
-- **Smooth animations and transitions**:  
-  Modern and fluid navigation thanks to the integration of Framer Motion and AOS.
+The build output is `client/dist/`.
 
-- **Responsive design**:  
-  The website adapts perfectly to mobile devices, tablets, and desktops.
+## Contact form
 
----
+The request URL is defined in [client/src/email.js](client/src/email.js) and currently points to the hosted email service. To develop against the separate backend, configure that URL to your local server's `/send-email` route. The current client does not read an environment variable for this URL. Form submissions can send real email.
 
-## Why choose IT Cyberspace?
+## Content changes
 
-- Professional and experienced team
-- Personalized attention and 24/7 support
-- Tailored solutions for each client
-- Guaranteed security and confidentiality
+Update the appropriate components under `client/src/`, preserving service information and working navigation links. Check desktop/mobile layouts, contact validation and route refreshes. A static host must handle client-side routes appropriately.
 
----
-
-## Where to find us?
-
-Visit the website:  
-👉 [https://it-cyberspace.com/home#](https://it-cyberspace.com/home#)
-
-Or contact us directly through the form on the website.
-
----
-
-**Thank you for trusting IT Cyberspace!**  
-Your partner in technology, support, and cybersecurity.
+See the [client guide](client/README.md) for package-level instructions.
